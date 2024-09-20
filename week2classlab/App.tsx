@@ -1,20 +1,39 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StatusBar } from "expo-status-bar";
+import {
+    StyleSheet,
+    ScrollView,
+    Text,
+    ActivityIndicator,
+    Image,
+} from "react-native";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    return (
+        <ScrollView>
+            <Text >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                in dui mauris.
+            </Text>
+            <Text >
+                Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor
+                neque eu tellus rhoncus ut eleifend nibh porttitor.
+            </Text>
+            <ActivityIndicator size="large" color="#000" />
+            <Image
+                source={{
+                    uri: "https://reactnative.dev/img/tiny_logo.png",
+                }}
+                style={styles.image}
+            />
+        </ScrollView>
+    );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    
+    image: {
+        width: 500,
+        height: 500,
+    },
 });
